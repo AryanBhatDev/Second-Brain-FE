@@ -1,17 +1,17 @@
-import {
-    buttonSizes,
-    defaultStyles,
-    variantStyles,
-} from '../assets/styles/buttonStyles';
+import { buttonSizes, variantStyles } from '../assets/styles/buttonStyles';
 import { ButtonProps } from '../interfaces/button.interface';
 
-export const Button = (props: ButtonProps) => (
-    <button
-        className={`${variantStyles[props.variant]} ${defaultStyles} ${
-            buttonSizes[props.size]
-        }`}
-    >
-        {props.startIcon ? <div className="pr-2">{props.startIcon}</div> : null}
-        {props.text} {props.endIcon}
-    </button>
-);
+export function Button(props: ButtonProps) {
+    return (
+        <button
+            className={`${variantStyles[props.variant]} 
+                ${buttonSizes[props.size]}`}
+        >
+            <div className='flex'>
+                <div className='self-center'>{props.startIcon}</div>
+                <div className='px-2 self-center'>{props.text} </div>
+                <div className='self-center'>{props.endIcon}</div>
+            </div>
+        </button>
+    );
+}

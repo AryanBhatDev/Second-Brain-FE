@@ -26,7 +26,6 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-undef': 'error',
-      'semi': ['error', 'always'],
       'no-extra-semi': 'error',
       indent: [
         'error',
@@ -66,7 +65,7 @@ export default tseslint.config(
       quotes: [
         'error',
         'single',
-        { avoidEscape: true, allowTemplateLiterals: true },
+        { avoidEscape: false, allowTemplateLiterals: true },
       ],
       'padding-line-between-statements': [
         'error',
