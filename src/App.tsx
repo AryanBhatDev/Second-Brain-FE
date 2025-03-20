@@ -1,6 +1,8 @@
-import './App.css';
+
 import { PlusIcon } from './assets/icons/PlusIcon';
-import { Button } from './components/Button';
+import { Button } from './components/ui/Button';
+
+
 
 function App() {
     return (
@@ -8,7 +10,7 @@ function App() {
             <Button
                 startIcon={<PlusIcon size='lg' />}
                 variant='primary'
-                size='sm'
+                size='md'
                 onClick={() => {}}
                 text={'Hello'}
             />
