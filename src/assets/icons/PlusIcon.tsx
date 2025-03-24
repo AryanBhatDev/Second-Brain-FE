@@ -1,15 +1,12 @@
 
-import { IconProps } from '../../interfaces/icons.interface';
-import { iconSizeVariants } from '../../uils/iconSize';
-
-export const PlusIcon = (props:IconProps) => (
+export const PlusIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        className={iconSizeVariants(props.size)}
+        className='size-4'
     >
         <path
             stroke-linecap="round"

@@ -3,7 +3,7 @@ import { ButtonSizes, ButtonVariants } from '../types/button.types';
 
 export interface ButtonProps {
   variant: ButtonVariants;
-  size: ButtonSizes;
+  size?: ButtonSizes;
   text: string;
   startIcon?: ReactElement;
   onClick: () => void;
