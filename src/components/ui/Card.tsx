@@ -4,7 +4,7 @@ import { CardProps } from '../../interfaces/card.interface';
 
 export function Card({ title, link, type }: CardProps) {
     return (
-        <div className='p-4 rounded-md w-84 h-84 bg-white border border-gray-200'>
+        <div className='p-4 rounded-md w-84 h-84 overflow-y-scroll bg-white border border-gray-200'>
             <div className='flex justify-between'>
                 <div className='flex items-center'>
                     <ShareIcon />
@@ -25,7 +25,7 @@ export function Card({ title, link, type }: CardProps) {
                 {type === 'youtube' && (
                     <iframe
                         className='w-full'
-                        src={link.replace('watch', 'embed')}
+                        src={link.replace('watch', 'embed').replace('?v=','/')}
                         title='YouTube video player'
                         frameBorder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
@@ -36,7 +36,7 @@ export function Card({ title, link, type }: CardProps) {
                 {type === 'twitter' && (
                     <div className='w-full h-full'>
                         <blockquote className='twitter-tweet'>
-                            <a href={link}></a>
+                            <a href={link.replace('x.com','twitter.com')}></a>
                         </blockquote>
                     </div>
                 )}

@@ -4,7 +4,7 @@ import { ButtonProps } from '../../interfaces/button.interface';
 
 export function Button(props: ButtonProps) {
     return (
-        <button
+        <button onClick={props.onClick}
             className={`${variantStyles[props.variant]}`}
         >
             <div className='flex items-center'>

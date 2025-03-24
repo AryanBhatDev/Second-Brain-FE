@@ -6,5 +6,5 @@ export interface ButtonProps {
   size?: ButtonSizes;
   text: string;
   startIcon?: ReactElement;
-  onClick: () => void;
+  onClick?: () => void;
 }
