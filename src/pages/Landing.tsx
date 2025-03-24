@@ -4,19 +4,20 @@ import { Card } from '../components/ui/Card';
 
 export function Landing() {
     return (
-        <div className='bg-white-500'>
-            <div className='grid grid-cols-1 sm:grid-cols-[150px_auto] md:grid-cols-[250px_auto] gap-4 p-4'>
-                <div>
+        <div className='bg-white-500 min-h-screen'>
+            <div className='flex flex-row'>
+                <div className='w-[25%] min-w-[150px] max-w-[250px]'>
                     <Sidebar />
                 </div>
-                <div>
+
+                <div className='flex-1 p-4'>
                     <div className='pt-2'>
                         <Header />
                     </div>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4'>
                         <Card
                             type='twitter'
-                            link='https://x.com/narendramodi/status/1903693037596823723'
+                            link='https://x.com/josh_uglyasf/status/1903853143303057747'
                             title='Tweet'
                         />
                         <Card
